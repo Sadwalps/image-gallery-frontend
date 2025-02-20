@@ -1,0 +1,71 @@
+.nav{
+  color: rgb(46, 117, 232);
+ 
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+.nav:hover{
+  color: blue;
+  font-size: 23px;
+  transition-duration: .2s;
+}
+
+.navhead{
+  color:rgb(46, 117, 232);
+  font-weight: 600;
+}
+
+#Websitelogo{
+  height: 50px;
+}
+#Websitelogo:hover{
+height: 57px;
+transition-duration: .2s;
+}
+.footersubdiv{
+  
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerlogos{
+  font-size: 30px;
+  color: rgb(46, 117, 232);
+}
+.footerlogos:hover{
+  font-size: 35px;
+  color: blue;
+  transition-duration: .2s;
+  cursor: pointer;
+}
+#addlogo{
+  font-size: 27px;
+  color:rgb(46, 117, 232);
+}
+#addlogo:hover{
+  color: blue;
+  font-size: 32px;
+  transition-duration: .2s;
+  cursor: pointer;
+}
+.cardmaindiv{
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#cardi{
+  height: 177px;
+}
+#cardi:hover{
+  height: 185px;
+  box-shadow: 0px 0px 40px rgb(50, 135, 231);
+  cursor: pointer;
+}
+
+
+

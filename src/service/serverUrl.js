@@ -1,0 +1,1 @@
+export const serverUrl="https://image-gallery-server-f9mb.onrender.com"
