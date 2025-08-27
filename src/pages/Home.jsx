@@ -23,22 +23,29 @@ function Home() {
 
   })
   console.log(images);
+  const handleCancel = () => {
+    setImages({
+      caption: "",
+      imgUrl: ""
+    })
+  }
 
-
-  const handleClose = () => setShow(false);
+  const handleClose = () =>{
+    setShow(false);
+    handleCancel()
+  } 
   const handleShow = () => setShow(true);
   const handleAdd = async () => {
     const { caption, imgUrl } = images
     if (!caption || !imgUrl) {
       alert('Please fill the form properly')
     } else {
-
-
       const result = await addImageApi({ caption, imgUrl })
       console.log(result);
       if (result.status >= 200 && result.status < 300) {
         alert(`Image is added`)
         setAddStatus(result)
+        handleClose()
       }
     }
   }
@@ -70,8 +77,8 @@ function Home() {
             <input onChange={(e) => setImages({ ...images, imgUrl: e.target.value })} type="text" className='form-control text-primary' placeholder='Image Url' />
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
+            <Button variant="secondary" onClick={handleCancel}>
+              Cancel
             </Button>
             <Button variant="primary" onClick={handleAdd} setAddStatus={setAddStatus}>
               Add
@@ -82,7 +89,7 @@ function Home() {
         <div className="conatiner-fluid">
 
 
-          <div className="row mt-5 ">
+          <div className="row mt-5 mb-4">
             <div className="col-md-2"></div>
             <div className="col-md-8 text-center">
               <h1 style={{ fontWeight: "700" }}>Create your own <span className='text-primary'> Gallery</span> </h1>
