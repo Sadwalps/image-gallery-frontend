@@ -73,8 +73,8 @@ function Home() {
             <Modal.Title style={{ fontWeight: "700", color: "rgb(46, 117, 232)" }}>Add Images</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <input onChange={(e) => setImages({ ...images, caption: e.target.value })} type="text" className='form-control text-primary' placeholder='Image Title' /> <br />
-            <input onChange={(e) => setImages({ ...images, imgUrl: e.target.value })} type="text" className='form-control text-primary' placeholder='Image Url' />
+            <input value={images.caption} onChange={(e) => setImages({ ...images, caption: e.target.value })} type="text" className='form-control text-primary' placeholder='Image Title' /> <br />
+            <input value={images.imgUrl} onChange={(e) => setImages({ ...images, imgUrl: e.target.value })} type="text" className='form-control text-primary' placeholder='Image Url' />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCancel}>
